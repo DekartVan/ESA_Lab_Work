@@ -1,0 +1,9 @@
+com/example/demo/resources/DirectorResource.class
+com/example/demo/repositories/DirectorRepository.class
+com/example/demo/models/Movie.class
+com/example/demo/services/MovieService.class
+com/example/demo/MovieApplication.class
+com/example/demo/repositories/MovieRepository.class
+com/example/demo/services/DirectorService.class
+com/example/demo/resources/HelloResource.class
+com/example/demo/models/Director.class
