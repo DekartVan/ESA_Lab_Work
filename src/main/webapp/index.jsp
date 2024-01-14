@@ -7,7 +7,7 @@
 <body>
 <h1>All information</h1>
 <br/>
-<a href="api/hello">All movies</a>
+<a href="api/movie">All movies</a>
 <br/>
 <a href="api/director">All directors</a>
 </body>
