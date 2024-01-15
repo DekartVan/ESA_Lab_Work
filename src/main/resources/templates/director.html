@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Director Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        h2 {
+            font-size: 24px;
+            color: #0066cc;
+        }
+
+        h3 {
+            color: #009933;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 5px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+<h1>Director Details</h1>
+
+<div th:if="${director != null}">
+    <h2 th:text="${director.name}"></h2>
+    <p th:text="'Country: ' + ${director.country}"></p>
+    <p th:text="'Birthdate: ' + ${#dates.format(director.birthdate, 'dd/MM/yyyy')}"></p>
+
+    <h3>Movies Directed:</h3>
+    <ul>
+        <li th:each="movie : ${director.movies}" th:text="${movie.title}"></li>
+    </ul>
+</div>
+<div th:if="${director == null}">
+    <p>Director not found</p>
+</div>
+</body>
+</html>

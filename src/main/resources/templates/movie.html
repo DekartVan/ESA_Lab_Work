@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Movie Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        h2 {
+            font-size: 24px;
+            color: #0066cc;
+        }
+
+        h3 {
+            color: #009933;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 5px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+<h1>Movie Details</h1>
+
+<div th:if="${movie != null}">
+    <h2 th:text="${movie.title}"></h2>
+    <p th:text="'Year: ' + ${movie.year}"></p>
+    <p th:text="'Rating: ' + ${movie.rating}"></p>
+
+    <h3>Directed by:</h3>
+    <p th:text="${movie.director.name} + ' (' + ${movie.director.country} + ')'"></p>
+</div>
+<div th:if="${movie == null}">
+    <p>Movie not found</p>
+</div>
+</body>
+</html>
